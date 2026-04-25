@@ -1,9 +1,6 @@
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import {
-  LayoutDashboard, BookOpen, MessageSquare, User, LogOut, GraduationCap,
-} from 'lucide-react'
-import { useAuthStore } from '@/store/authStore'
+import { LayoutDashboard, BookOpen, MessageSquare, User, GraduationCap } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
@@ -14,14 +11,6 @@ const navItems = [
 ]
 
 export default function Sidebar() {
-  const { logout, user } = useAuthStore()
-  const navigate = useNavigate()
-
-  const handleLogout = () => {
-    logout()
-    navigate('/')
-  }
-
   return (
     <aside
       className="w-64 h-screen flex flex-col glass border-r border-border shrink-0"
@@ -77,25 +66,12 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      {/* User + Logout */}
-      <div className="p-3 border-t border-border">
-        <div className="flex items-center gap-3 px-3 py-2 mb-1">
-          <div className="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white text-xs font-bold shrink-0">
-            {user?.display_name?.[0]?.toUpperCase() ?? 'U'}
-          </div>
-          <div className="min-w-0">
-            <p className="text-sm font-medium truncate">{user?.display_name ?? 'User'}</p>
-            <p className="text-xs text-muted-foreground truncate">{user?.email ?? ''}</p>
-          </div>
-        </div>
-        <button
-          onClick={handleLogout}
-          aria-label="Log out"
-          className="flex items-center gap-3 w-full px-3 py-2 rounded-xl text-sm text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
-        >
-          <LogOut size={16} aria-hidden />
-          Log out
-        </button>
+      {/* Branding footer */}
+      <div className="p-4 border-t border-border">
+        <p className="text-xs text-muted-foreground text-center">
+          Powered by{' '}
+          <span className="gradient-text font-semibold">Gemini AI</span>
+        </p>
       </div>
     </aside>
   )

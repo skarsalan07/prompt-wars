@@ -41,7 +41,10 @@ def create_user_doc(user_id: str, email: str, display_name: str) -> dict:
         "chat_sessions": [],
     }
     if col:
-        col.document(user_id).set(doc)
+        try:
+            col.document(user_id).set(doc)
+        except Exception as exc:
+            logger.warning(f"Firestore create_user_doc failed: {exc}")
     return doc
 
 
@@ -49,8 +52,12 @@ def get_user_doc(user_id: str) -> Optional[dict]:
     col = _users_col()
     if col is None:
         return None
-    doc = col.document(user_id).get()
-    return doc.to_dict() if doc.exists else None
+    try:
+        doc = col.document(user_id).get()
+        return doc.to_dict() if doc.exists else None
+    except Exception as exc:
+        logger.warning(f"Firestore get_user_doc failed: {exc}")
+        return None
 
 
 def update_progress(user_id: str, topic: str, correct: bool) -> None:
@@ -58,41 +65,43 @@ def update_progress(user_id: str, topic: str, correct: bool) -> None:
     col = _users_col()
     if col is None:
         return
-    doc_ref = col.document(user_id)
-    doc = doc_ref.get()
-    if not doc.exists:
-        return
-    data = doc.to_dict()
-    progress = data.get("progress", {})
+    try:
+        doc_ref = col.document(user_id)
+        doc = doc_ref.get()
+        if not doc.exists:
+            return
+        data = doc.to_dict()
+        progress = data.get("progress", {})
 
-    # Update stats
-    topics = progress.get("topics_studied", [])
-    if topic not in topics:
-        topics.append(topic)
+        topics = progress.get("topics_studied", [])
+        if topic not in topics:
+            topics.append(topic)
 
-    total = progress.get("total_questions_answered", 0) + 1
-    correct_count = progress.get("correct_answers", 0) + (1 if correct else 0)
-    accuracy = correct_count / total
+        total = progress.get("total_questions_answered", 0) + 1
+        correct_count = progress.get("correct_answers", 0) + (1 if correct else 0)
+        accuracy = correct_count / total
 
-    weak = progress.get("weak_areas", [])
-    strong = progress.get("strong_areas", [])
-    if accuracy < 0.5 and topic not in weak:
-        weak.append(topic)
-        if topic in strong:
-            strong.remove(topic)
-    elif accuracy >= 0.8 and topic not in strong:
-        strong.append(topic)
-        if topic in weak:
-            weak.remove(topic)
+        weak = progress.get("weak_areas", [])
+        strong = progress.get("strong_areas", [])
+        if accuracy < 0.5 and topic not in weak:
+            weak.append(topic)
+            if topic in strong:
+                strong.remove(topic)
+        elif accuracy >= 0.8 and topic not in strong:
+            strong.append(topic)
+            if topic in weak:
+                weak.remove(topic)
 
-    doc_ref.update({
-        "progress.topics_studied": topics,
-        "progress.total_questions_answered": total,
-        "progress.correct_answers": correct_count,
-        "progress.weak_areas": weak,
-        "progress.strong_areas": strong,
-        "progress.last_active": datetime.now(timezone.utc),
-    })
+        doc_ref.update({
+            "progress.topics_studied": topics,
+            "progress.total_questions_answered": total,
+            "progress.correct_answers": correct_count,
+            "progress.weak_areas": weak,
+            "progress.strong_areas": strong,
+            "progress.last_active": datetime.now(timezone.utc),
+        })
+    except Exception as exc:
+        logger.warning(f"Firestore update_progress failed: {exc}")
 
 
 def save_chat_message(user_id: str, role: str, content: str) -> None:
@@ -100,8 +109,11 @@ def save_chat_message(user_id: str, role: str, content: str) -> None:
     col = _users_col()
     if col is None:
         return
-    msg = {"role": role, "content": content, "timestamp": datetime.now(timezone.utc)}
-    col.document(user_id).collection("chat_history").add(msg)
+    try:
+        msg = {"role": role, "content": content, "timestamp": datetime.now(timezone.utc)}
+        col.document(user_id).collection("chat_history").add(msg)
+    except Exception as exc:
+        logger.warning(f"Firestore save_chat_message failed: {exc}")
 
 
 def get_chat_history(user_id: str, limit: int = 50) -> list[dict]:

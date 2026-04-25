@@ -1,25 +1,17 @@
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
 
-export const useAuthStore = create(
-  persist(
-    (set) => ({
-      user: null,
-      token: null,
-      isAuthenticated: false,
+const GUEST = {
+  id: 'guest',
+  email: 'guest@learning.ai',
+  display_name: 'Learner',
+  created_at: new Date().toISOString(),
+}
 
-      login: (user, token) =>
-        set({ user, token, isAuthenticated: true }),
-
-      logout: () =>
-        set({ user: null, token: null, isAuthenticated: false }),
-
-      updateUser: (updates) =>
-        set((state) => ({ user: { ...state.user, ...updates } })),
-    }),
-    {
-      name: 'lc-auth',
-      partialize: (state) => ({ user: state.user, token: state.token, isAuthenticated: state.isAuthenticated }),
-    }
-  )
-)
+export const useAuthStore = create(() => ({
+  user: GUEST,
+  token: null,
+  isAuthenticated: true,
+  login: () => {},
+  logout: () => {},
+  updateUser: () => {},
+}))

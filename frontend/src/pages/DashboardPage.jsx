@@ -3,14 +3,12 @@ import { motion } from 'framer-motion'
 import { BookOpen, Target, Flame, CheckCircle2, TrendingUp, Lightbulb, ArrowRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useLearningStore } from '@/store/learningStore'
-import { useAuthStore } from '@/store/authStore'
 import { usersApi } from '@/services/api'
 import ProgressRing from '@/components/dashboard/ProgressRing'
 import WeaknessStrengthChart from '@/components/dashboard/WeaknessStrengthChart'
 import StatCard from '@/components/dashboard/StatCard'
 
 export default function DashboardPage() {
-  const { user } = useAuthStore()
   const { progress, setProgress, recommendations, setRecommendations } = useLearningStore()
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
@@ -50,7 +48,7 @@ export default function DashboardPage() {
         <div>
           <h2 className="text-2xl font-bold">
             Good {getGreeting()},{' '}
-            <span className="gradient-text">{user?.display_name?.split(' ')[0] ?? 'Learner'}</span> 👋
+            <span className="gradient-text">Learner</span> 👋
           </h2>
           <p className="text-muted-foreground text-sm mt-1">Here's your learning overview</p>
         </div>

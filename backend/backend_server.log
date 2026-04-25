@@ -1,1 +1,686 @@
-/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/bin/python: No module named uvicorn
+INFO:     Will watch for changes in these directories: ['/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [23591] using WatchFiles
+/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/services/ai_engine.py:15: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [23604]
+INFO:     Waiting for application startup.
+2026-04-25 14:54:52,067 | INFO | app.main | Starting Learning Companion API v1.0.0
+2026-04-25 14:54:52,165 | INFO | app.core.firebase | Firebase initialized successfully.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:54488 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'venv/lib/python3.13/site-packages/distro/__main__.py', 'venv/lib/python3.13/site-packages/tenacity/tornadoweb.py', 'venv/lib/python3.13/site-packages/google/genai/chats.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_client_adapter.py', 'venv/lib/python3.13/site-packages/tenacity/retry.py', 'venv/lib/python3.13/site-packages/sniffio/_tests/test_sniffio.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/file_search_call_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_maps_call_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_utils.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/deep_research_agent_config_param.py', 'venv/lib/python3.13/site-packages/sniffio/_impl.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/content_delta.py', 'venv/lib/python3.13/site-packages/tenacity/asyncio/retry.py', 'venv/lib/python3.13/site-packages/google/genai/_live_converters.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/error_event.py', 'venv/lib/python3.13/site-packages/google/genai/client.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/file_search_call_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/file_search_result_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_sync.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_logs.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_types.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/generation_config.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_transform.py', 'venv/lib/python3.13/site-packages/sniffio/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_local_tokenizer_loader.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/file_citation_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/annotation_param.py', 'venv/lib/python3.13/site-packages/google/genai/tokens.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/function.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/file_search_result_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/code_execution_result_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/code_execution_result_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/code_execution_call_arguments_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/document_content.py', 'venv/lib/python3.13/site-packages/google/genai/batches.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/file_citation.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_compat.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/function_result_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_response.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/audio_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/content_stop.py', 'venv/lib/python3.13/site-packages/google/genai/documents.py', 'venv/lib/python3.13/site-packages/google/genai/_api_module.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_files.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_path.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/deep_research_agent_config.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_datetime_parse.py', 'venv/lib/python3.13/site-packages/google/genai/caches.py', 'venv/lib/python3.13/site-packages/google/genai/interactions.py', 'venv/lib/python3.13/site-packages/google/genai/types.py', 'venv/lib/python3.13/site-packages/google/genai/_operations_converters.py', 'venv/lib/python3.13/site-packages/google/genai/live_music.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_maps_call_arguments_param.py', 'venv/lib/python3.13/site-packages/google/genai/local_tokenizer.py', 'venv/lib/python3.13/site-packages/google/genai/files.py', 'venv/lib/python3.13/site-packages/tenacity/_utils.py', 'venv/lib/python3.13/site-packages/distro/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_extra_utils.py', 'venv/lib/python3.13/site-packages/google/genai/_test_api_client.py', 'venv/lib/python3.13/site-packages/distro/distro.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_version.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/content_start.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/function_result_content.py', 'venv/lib/python3.13/site-packages/sniffio/_tests/__init__.py', 'venv/lib/python3.13/site-packages/tenacity/stop.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/function_call_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/resources/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_compat.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/dynamic_agent_config_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_resources_proxy.py', 'venv/lib/python3.13/site-packages/sniffio/_version.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/audio_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_automatic_function_calling_util.py', 'venv/lib/python3.13/site-packages/google/genai/_common.py', 'venv/lib/python3.13/site-packages/google/genai/_tokens_converters.py', 'venv/lib/python3.13/site-packages/tenacity/before_sleep.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/annotation.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_base_client.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_streaming.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_mcp_utils.py', 'venv/lib/python3.13/site-packages/google/genai/_api_client.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/code_execution_call_content.py', 'venv/lib/python3.13/site-packages/google/genai/_base_transformers.py', 'venv/lib/python3.13/site-packages/google/genai/tunings.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_constants.py', 'venv/lib/python3.13/site-packages/google/genai/_transformers.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_adapters.py', 'venv/lib/python3.13/site-packages/google/genai/live.py', 'venv/lib/python3.13/site-packages/google/genai/_replay_api_client.py', 'venv/lib/python3.13/site-packages/tenacity/nap.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_typing.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/generation_config_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_resource.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/resources/webhooks.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_client.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/document_content_param.py', 'venv/lib/python3.13/site-packages/tenacity/asyncio/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/code_execution_call_arguments.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/allowed_tools.py', 'venv/lib/python3.13/site-packages/google/genai/models.py', 'venv/lib/python3.13/site-packages/google/genai/file_search_stores.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/resources/interactions.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/content.py', 'venv/lib/python3.13/site-packages/tenacity/wait.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_qs.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/code_execution_call_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_base_url.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_streams.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_maps_call_arguments.py', 'venv/lib/python3.13/site-packages/google/genai/pagers.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/dynamic_agent_config.py', 'venv/lib/python3.13/site-packages/google/genai/version.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_json.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/allowed_tools_param.py', 'venv/lib/python3.13/site-packages/google/genai/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_models.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/function_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_proxy.py', 'venv/lib/python3.13/site-packages/tenacity/after.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_exceptions.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/_utils/_reflection.py', 'venv/lib/python3.13/site-packages/google/genai/operations.py', 'venv/lib/python3.13/site-packages/tenacity/before.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/function_call_content.py', 'venv/lib/python3.13/site-packages/google/genai/errors.py', 'venv/lib/python3.13/site-packages/tenacity/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_maps_call_content_param.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-04-25 14:55:43,971 | INFO | app.main | Shutting down Learning Companion API
+INFO:     Application shutdown complete.
+INFO:     Finished server process [23604]
+WARNING:  WatchFiles detected changes in 'venv/lib/python3.13/site-packages/google/genai/tests/errors/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/file_search_stores/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_t_tool.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_convert_if_exist_pydantic_model.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_config_zero_value.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/speech_config_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/tokens/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/batches/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_citation_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/video_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_maps_result.py', 'venv/lib/python3.13/site-packages/google/genai/tests/tunings/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_t_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/place_citation.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/text_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_generate_images.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_generate_content.py', 'venv/lib/python3.13/site-packages/google/genai/tests/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/interactions/test_integration.py', 'venv/lib/python3.13/site-packages/google/genai/tests/mcp/test_parse_config_for_mcp_sessions.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_cached_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_search_call_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_get_function_map.py', 'venv/lib/python3.13/site-packages/google/genai/tests/documents/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/test_update.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_images.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_t_contents.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_context_result_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_update.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_get.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/caches/test_create_get_delete.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/interaction_sse_event.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_model.py', 'venv/lib/python3.13/site-packages/google/genai/tests/chats/test_send_message.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/tool_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_get.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/thought_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_list_params.py', 'venv/lib/python3.13/site-packages/google/genai/tests/files/test_delete.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_context_result_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_citation.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_part.py', 'venv/lib/python3.13/site-packages/google/genai/tests/file_search_stores/test_get.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_bytes.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/test_client_initialization.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_segment_image.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/batches/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_get_max_remote_calls_for_afc.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_thought.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_search_result_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/files/test_register_table.py', 'venv/lib/python3.13/site-packages/google/genai/tests/common/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/image_config.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_context_result.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_cancel.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_delete.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/text_content.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_count_tokens.py', 'venv/lib/python3.13/site-packages/google/genai/tests/conftest.py', 'venv/lib/python3.13/site-packages/google/genai/tests/live/test_send_realtime_input.py', 'venv/lib/python3.13/site-packages/google/genai/tests/interactions/test_paths.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/tool_choice_type.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/turn.py', 'venv/lib/python3.13/site-packages/google/genai/tests/live/test_send_client_content.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/tunings/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_http_options.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_find_afc_incompatible_tool_indexes.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_delete.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/image_config_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_ping_response.py', 'venv/lib/python3.13/site-packages/google/genai/tests/documents/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_convert_number_values_for_function_call_args.py', 'venv/lib/python3.13/site-packages/google/genai/tests/mcp/test_set_mcp_usage_header.py', 'venv/lib/python3.13/site-packages/google/genai/tests/operations/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/tokens/test_create.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/caches/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_search_call_content.py', 'venv/lib/python3.13/site-packages/google/genai/tests/live/test_send_tool_response.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/mcp_server_tool_call_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_schema.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_list_response.py', 'venv/lib/python3.13/site-packages/google/genai/tests/local_tokenizer/test_local_tokenizer.py', 'venv/lib/python3.13/site-packages/google/genai/tests/file_search_stores/test_create.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/test_get.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/test_retries.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_delete_response.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/test_get_custom_url.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_config.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_search_call_arguments.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/test_client_close.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_blobs.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_raise_error_for_afc_incompatible_config.py', 'venv/lib/python3.13/site-packages/google/genai/tests/interactions/test_auth.py', 'venv/lib/python3.13/site-packages/google/genai/tests/files/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_create.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_generate_content_stream_afc.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_should_append_afc_history.py', 'venv/lib/python3.13/site-packages/google/genai/tests/live/test_live_response.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_embedding.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_ping_params.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_create_with_inlined_requests.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/mcp_server_tool_call_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_compute_tokens.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/interaction.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/test_client_requests.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/image_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/chats/test_send_message.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_context_call_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/turn_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/chats/test_validate_response.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/batches/test_create_delete.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/test_async_stream.py', 'venv/lib/python3.13/site-packages/google/genai/tests/live/test_live.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/chats/test_send_message_stream.py', 'venv/lib/python3.13/site-packages/google/genai/tests/operations/test_get.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/caches/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_context_call_arguments.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/model.py', 'venv/lib/python3.13/site-packages/google/genai/tests/documents/test_delete.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/tunings/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/test_update_custom_url.py', 'venv/lib/python3.13/site-packages/google/genai/tests/mcp/test_parse_config_for_mcp_usage.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_maps_result_content.py', 'venv/lib/python3.13/site-packages/google/genai/tests/live/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/common/test_duck_type.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/test_upload_errors.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/mcp_server_tool_result_content.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_t_parts.py', 'venv/lib/python3.13/site-packages/google/genai/tests/types/test_bytes_internal.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_upscale_image.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_create_with_bigquery.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/signing_secret.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/interaction_status_update.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_rotate_signing_secret_response.py', 'venv/lib/python3.13/site-packages/google/genai/tests/types/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/files/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/usage_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/interaction_complete_event.py', 'venv/lib/python3.13/site-packages/google/genai/tests/interactions/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_function_responses.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_tools.py', 'venv/lib/python3.13/site-packages/google/genai/tests/tunings/test_get.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_recontext_image.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_maps_result_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_create_with_file.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/test_create.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_from_apikey.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/caches/test_create_update_get.py', 'venv/lib/python3.13/site-packages/google/genai/tests/files/test_get.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/chats/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_embed_content.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/test_custom_client.py', 'venv/lib/python3.13/site-packages/google/genai/tests/files/test_register.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_should_disable_afc.py', 'venv/lib/python3.13/site-packages/google/genai/tests/local_tokenizer/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/tool.py', 'venv/lib/python3.13/site-packages/google/genai/tests/file_search_stores/test_upload_to_file_search_store.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_multi_regional.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_upscale_image.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/tunings/test_create_get_cancel.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/local_tokenizer/test_local_tokenizer_loader.py', 'venv/lib/python3.13/site-packages/google/genai/tests/documents/test_get.py', 'venv/lib/python3.13/site-packages/google/genai/tests/public_samples/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/test_create_custom_url.py', 'venv/lib/python3.13/site-packages/google/genai/tests/chats/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_edit_image.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/place_citation_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_maps_result_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_context_result_content.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_t_part.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/mcp/test_mcp_to_gemini_tools.py', 'venv/lib/python3.13/site-packages/google/genai/tests/imports/test_no_optional_imports.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content.py', 'venv/lib/python3.13/site-packages/google/genai/tests/live/test_live_music.py', 'venv/lib/python3.13/site-packages/google/genai/tests/file_search_stores/test_delete.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_search_result.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_segment_image.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/tunings/test_tune.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_mcp.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_get_function_response_parts.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/test_http_options.py', 'venv/lib/python3.13/site-packages/google/genai/tests/chats/test_get_history.py', 'venv/lib/python3.13/site-packages/google/genai/tests/file_search_stores/test_import_file.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/speech_config.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_update_params.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/usage.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/model_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_function_call_streaming.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_create_params.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_recontext_image.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_t_tools.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/image_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/interaction_start_event.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_generate_videos.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_embed.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/tunings/test_create.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_search_call_arguments_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/files/test_upload.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/test_delete_custom_url.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/files/test_upload_get_delete.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/interaction_get_params.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/batches/test_create_get_cancel.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/constants.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_videos.py', 'venv/lib/python3.13/site-packages/google/genai/tests/mcp/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/mcp/test_has_mcp_tool_usage.py', 'venv/lib/python3.13/site-packages/google/genai/tests/public_samples/test_gemini_text_only.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_generate_content_stream.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_invoke_function_from_dict_args.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_context_call_content.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/tool_choice_config_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_rotate_signing_secret_params.py', 'venv/lib/python3.13/site-packages/google/genai/tests/errors/test_api_error.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/thought_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/test_delete.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/tool_choice_config.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_image_generation.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/files/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_compute_tokens.py', 'venv/lib/python3.13/site-packages/google/genai/tests/transformers/test_t_batch.py', 'venv/lib/python3.13/site-packages/google/genai/tests/caches/constants.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/models/test_count_tokens.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/thinking_level.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/test_generate_content_stream_afc_thoughts.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/mcp_server_tool_result_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/file_search_stores/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/client/test_replay_client_equality.py', 'venv/lib/python3.13/site-packages/google/genai/tests/tunings/test_cancel.py', 'venv/lib/python3.13/site-packages/google/genai/tests/afc/__init__.py', 'venv/lib/python3.13/site-packages/google/genai/tests/shared/files/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/pytest_helper.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_edit_image.py', 'venv/lib/python3.13/site-packages/google/genai/tests/common/test_common.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_generate_content_media_resolution.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/webhook_config_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/tunings/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/batches/test_create_with_gcs.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/url_context_call_arguments_param.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/video_content_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/files/test_download.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/interaction_create_params.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_search_result_param.py', 'venv/lib/python3.13/site-packages/google/genai/tests/models/test_list.py', 'venv/lib/python3.13/site-packages/google/genai/tests/tunings/test_end_to_end.py', 'venv/lib/python3.13/site-packages/google/genai/_interactions/types/google_search_result_content.py'. Reloading...
+WARNING:  WatchFiles detected changes in 'venv/lib/python3.13/site-packages/google/genai/tests/types/test_optional_types.py', 'venv/lib/python3.13/site-packages/google/genai/tests/types/test_part_type.py', 'venv/lib/python3.13/site-packages/google/genai/tests/types/test_schema_json_schema.py', 'venv/lib/python3.13/site-packages/google/genai/tests/types/test_types.py', 'venv/lib/python3.13/site-packages/google/genai/tests/types/test_schema_from_json_schema.py', 'venv/lib/python3.13/site-packages/google/genai/tests/types/test_bytes_type.py', 'venv/lib/python3.13/site-packages/google/genai/tests/types/test_future.py', 'venv/lib/python3.13/site-packages/google/genai/tests/types/test_bytes_internal.py'. Reloading...
+/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/services/ai_engine.py:15: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [24075]
+INFO:     Waiting for application startup.
+2026-04-25 14:55:52,124 | INFO | app.main | Starting Learning Companion API v1.0.0
+2026-04-25 14:55:52,206 | INFO | app.core.firebase | Firebase initialized successfully.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/ai_engine.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-04-25 14:56:45,327 | INFO | app.main | Shutting down Learning Companion API
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24075]
+INFO:     Started server process [24154]
+INFO:     Waiting for application startup.
+2026-04-25 14:56:51,783 | INFO | app.main | Starting Learning Companion API v1.0.0
+2026-04-25 14:56:51,847 | INFO | app.core.firebase | Firebase initialized successfully.
+INFO:     Application startup complete.
+2026-04-25 14:57:04,106 | INFO | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-04-25 14:57:05,903 | INFO | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-04-25 14:57:05,905 | ERROR | app.services.ai_engine | Explanation generation failed: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+INFO:     127.0.0.1:54520 - "POST /api/v1/learning/explain HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/ai_engine.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-04-25 14:57:51,801 | INFO | app.main | Shutting down Learning Companion API
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24154]
+INFO:     Started server process [24649]
+INFO:     Waiting for application startup.
+2026-04-25 14:57:57,173 | INFO | app.main | Starting Learning Companion API v1.0.0
+2026-04-25 14:57:57,241 | INFO | app.core.firebase | Firebase initialized successfully.
+INFO:     Application startup complete.
+2026-04-25 14:58:10,630 | INFO | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-04-25 14:58:22,298 | INFO | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54539 - "POST /api/v1/learning/explain HTTP/1.1" 200 OK
+2026-04-25 14:58:32,257 | INFO | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-04-25 14:58:38,347 | INFO | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-25 14:58:44,430 | ERROR | app.main | Unhandled exception: 404 The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. 
+Traceback (most recent call last):
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ~~~~~~~~~~~^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=new_compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. "
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.42.234:443 {grpc_message:"The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. ", grpc_status:5}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/slowapi/middleware.py", line 136, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/api/routes/chat.py", line 24, in chat
+    save_chat_message(GUEST_ID, "user", payload.message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/services/firestore.py", line 104, in save_chat_message
+    col.document(user_id).collection("chat_history").add(msg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/collection.py", line 134, in add
+    write_result = document_ref.create(document_data, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/document.py", line 101, in create
+    write_results = batch.commit(**kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/batch.py", line 63, in commit
+    commit_response = self._client._firestore_api.commit(
+        request=request,
+        metadata=self._client._rpc_metadata,
+        **kwargs,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1455, in commit
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. 
+INFO:     127.0.0.1:54542 - "POST /api/v1/chat HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ~~~~~~~~~~~^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=new_compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. "
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.42.234:443 {grpc_message:"The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. ", grpc_status:5}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/slowapi/middleware.py", line 136, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/api/routes/chat.py", line 24, in chat
+    save_chat_message(GUEST_ID, "user", payload.message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/services/firestore.py", line 104, in save_chat_message
+    col.document(user_id).collection("chat_history").add(msg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/collection.py", line 134, in add
+    write_result = document_ref.create(document_data, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/document.py", line 101, in create
+    write_results = batch.commit(**kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/batch.py", line 63, in commit
+    commit_response = self._client._firestore_api.commit(
+        request=request,
+        metadata=self._client._rpc_metadata,
+        **kwargs,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1455, in commit
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. 
+2026-04-25 14:58:50,894 | INFO | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-04-25 14:58:56,898 | INFO | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-25 14:58:57,679 | ERROR | app.main | Unhandled exception: 404 The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. 
+Traceback (most recent call last):
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ~~~~~~~~~~~^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=new_compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. "
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.42.234:443 {grpc_status:5, grpc_message:"The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. "}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/slowapi/middleware.py", line 136, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/api/routes/chat.py", line 24, in chat
+    save_chat_message(GUEST_ID, "user", payload.message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/services/firestore.py", line 104, in save_chat_message
+    col.document(user_id).collection("chat_history").add(msg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/collection.py", line 134, in add
+    write_result = document_ref.create(document_data, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/document.py", line 101, in create
+    write_results = batch.commit(**kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/batch.py", line 63, in commit
+    commit_response = self._client._firestore_api.commit(
+        request=request,
+        metadata=self._client._rpc_metadata,
+        **kwargs,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1455, in commit
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. 
+INFO:     127.0.0.1:54552 - "POST /api/v1/chat HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ~~~~~~~~~~~^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=new_compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. "
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.42.234:443 {grpc_status:5, grpc_message:"The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. "}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/slowapi/middleware.py", line 136, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/api/routes/chat.py", line 24, in chat
+    save_chat_message(GUEST_ID, "user", payload.message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/app/services/firestore.py", line 104, in save_chat_message
+    col.document(user_id).collection("chat_history").add(msg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/collection.py", line 134, in add
+    write_result = document_ref.create(document_data, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/document.py", line 101, in create
+    write_results = batch.commit(**kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/batch.py", line 63, in commit
+    commit_response = self._client._firestore_api.commit(
+        request=request,
+        metadata=self._client._rpc_metadata,
+        **kwargs,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1455, in commit
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/arsalanshaikh/Desktop/Promptwars/learning-companion/backend/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 The database (default) does not exist for project promptwars-69e92 Please visit https://console.cloud.google.com/datastore/setup?project=promptwars-69e92 to add a Cloud Datastore or Cloud Firestore database. 
+WARNING:  WatchFiles detected changes in 'app/services/firestore.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-04-25 14:59:34,893 | INFO | app.main | Shutting down Learning Companion API
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24649]
+INFO:     Started server process [24823]
+INFO:     Waiting for application startup.
+2026-04-25 14:59:40,964 | INFO | app.main | Starting Learning Companion API v1.0.0
+2026-04-25 14:59:41,023 | INFO | app.core.firebase | Firebase initialized successfully.
+INFO:     Application startup complete.

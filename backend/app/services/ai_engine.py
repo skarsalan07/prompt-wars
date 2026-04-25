@@ -1,10 +1,5 @@
 """
-AI Engine: Gemini 1.5 Pro integration for all AI features.
-- Topic explanation (simple / intermediate / advanced)
-- MCQ quiz generation
-- Answer evaluation (semantic similarity)
-- Conversational chat with memory
-- Topic recommendations
+AI Engine: Gemini 2.0 Flash integration using the new google-genai SDK.
 """
 import json
 import logging
@@ -12,7 +7,8 @@ import re
 import uuid
 from typing import Optional
 
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
 from app.core.config import get_settings
 from app.models.learning import (
@@ -29,16 +25,24 @@ from app.models.learning import (
 logger = logging.getLogger(__name__)
 settings = get_settings()
 
+MODEL = "gemini-2.5-flash"
 
-def _init_model(model_name: str = "gemini-1.5-pro") -> genai.GenerativeModel:
-    genai.configure(api_key=settings.google_gemini_api_key)
-    return genai.GenerativeModel(model_name)
+
+def _client() -> genai.Client:
+    return genai.Client(api_key=settings.google_gemini_api_key)
+
+
+def _extract_json(text: str) -> dict:
+    """Extract the first JSON object from a string, stripping markdown fences."""
+    text = re.sub(r"^```(?:json)?\s*", "", text.strip(), flags=re.MULTILINE)
+    text = re.sub(r"```\s*$", "", text.strip(), flags=re.MULTILINE)
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    return json.loads(match.group() if match else text)
 
 
 # ─── Explanation ─────────────────────────────────────────────────────────────
 
 async def generate_explanation(topic: str, level: str) -> ExplainResponse:
-    """Generate a tiered explanation for a topic."""
     level_descriptions = {
         "simple": "a complete beginner with no prior knowledge. Use analogies, everyday language, and avoid jargon.",
         "intermediate": "someone with basic knowledge. Include technical terms with brief definitions and examples.",
@@ -54,12 +58,9 @@ Respond ONLY with valid JSON in this exact format:
 }}"""
 
     try:
-        model = _init_model()
-        response = model.generate_content(prompt)
-        text = response.text.strip()
-        # Extract JSON even if wrapped in markdown code fences
-        match = re.search(r"\{.*\}", text, re.DOTALL)
-        data = json.loads(match.group() if match else text)
+        client = _client()
+        response = client.models.generate_content(model=MODEL, contents=prompt)
+        data = _extract_json(response.text)
         return ExplainResponse(
             topic=topic,
             level=level,
@@ -70,18 +71,15 @@ Respond ONLY with valid JSON in this exact format:
     except Exception as exc:
         logger.error(f"Explanation generation failed: {exc}")
         return ExplainResponse(
-            topic=topic,
-            level=level,
-            explanation=f"Unable to generate explanation at this time. Please try again.",
-            key_concepts=[],
-            suggested_next_levels=[],
+            topic=topic, level=level,
+            explanation="Unable to generate explanation at this time. Please try again.",
+            key_concepts=[], suggested_next_levels=[],
         )
 
 
 # ─── Quiz Generation ─────────────────────────────────────────────────────────
 
 async def generate_quiz(topic: str, difficulty: str, num_questions: int) -> QuizResponse:
-    """Generate MCQ questions for a topic."""
     prompt = f"""You are a quiz master. Generate {num_questions} multiple-choice questions about "{topic}" at {difficulty} difficulty.
 
 Respond ONLY with valid JSON in this exact format:
@@ -101,30 +99,21 @@ Respond ONLY with valid JSON in this exact format:
   ]
 }}
 
-Rules:
-- Questions must be clear and unambiguous
-- Only one option is correct
-- Explanations should be educational
-- Vary question types (definition, application, analysis)"""
+Rules: Questions must be clear, only one correct option, explanations educational."""
 
     try:
-        model = _init_model()
-        response = model.generate_content(prompt)
-        text = response.text.strip()
-        match = re.search(r"\{.*\}", text, re.DOTALL)
-        data = json.loads(match.group() if match else text)
-
-        questions = []
-        for q in data.get("questions", []):
-            questions.append(
-                QuizQuestion(
-                    id=str(uuid.uuid4()),
-                    question=q["question"],
-                    options=[MCQOption(**o) for o in q["options"]],
-                    explanation=q.get("explanation", ""),
-                )
+        client = _client()
+        response = client.models.generate_content(model=MODEL, contents=prompt)
+        data = _extract_json(response.text)
+        questions = [
+            QuizQuestion(
+                id=str(uuid.uuid4()),
+                question=q["question"],
+                options=[MCQOption(**o) for o in q["options"]],
+                explanation=q.get("explanation", ""),
             )
-
+            for q in data.get("questions", [])
+        ]
         return QuizResponse(topic=topic, difficulty=difficulty, questions=questions)
     except Exception as exc:
         logger.error(f"Quiz generation failed: {exc}")
@@ -136,30 +125,27 @@ Rules:
 async def evaluate_answer(
     question: str, correct_answer: str, user_answer: str, topic: str
 ) -> EvaluateResponse:
-    """Semantically evaluate a user's answer using Gemini."""
-    prompt = f"""You are a fair and constructive evaluator for a learning platform.
+    prompt = f"""You are a fair evaluator for a learning platform.
 
 Topic: {topic}
 Question: {question}
 Expected Answer: {correct_answer}
 Student's Answer: {user_answer}
 
-Evaluate the student's answer. Consider partial credit for answers that demonstrate understanding even if not perfectly worded.
+Evaluate the student's answer. Give partial credit for answers showing understanding.
 
 Respond ONLY with valid JSON:
 {{
-  "score": <float between 0.0 and 1.0>,
+  "score": <float 0.0-1.0>,
   "is_correct": <true if score >= 0.7>,
-  "feedback": "<constructive feedback explaining the evaluation>",
-  "correct_answer": "<a clear, well-worded correct answer>"
+  "feedback": "<constructive feedback>",
+  "correct_answer": "<clear correct answer>"
 }}"""
 
     try:
-        model = _init_model()
-        response = model.generate_content(prompt)
-        text = response.text.strip()
-        match = re.search(r"\{.*\}", text, re.DOTALL)
-        data = json.loads(match.group() if match else text)
+        client = _client()
+        response = client.models.generate_content(model=MODEL, contents=prompt)
+        data = _extract_json(response.text)
         score = float(data.get("score", 0.0))
         return EvaluateResponse(
             score=score,
@@ -170,8 +156,7 @@ Respond ONLY with valid JSON:
     except Exception as exc:
         logger.error(f"Answer evaluation failed: {exc}")
         return EvaluateResponse(
-            score=0.0,
-            is_correct=False,
+            score=0.0, is_correct=False,
             feedback="Evaluation service temporarily unavailable.",
             correct_answer=correct_answer,
         )
@@ -184,45 +169,42 @@ async def chat_with_ai(
     history: list[ChatMessage],
     topic_context: Optional[str] = None,
 ) -> ChatResponse:
-    """Context-aware conversational response using Gemini."""
-    system_prompt = f"""You are Learning Companion, an expert AI tutor. You help users learn and understand concepts deeply.
-Be concise yet thorough, use examples, and adapt to the user's apparent level.
-{f'Current learning topic context: {topic_context}' if topic_context else ''}
-Always be encouraging and constructive."""
+    system_prompt = (
+        f"You are Learning Companion, an expert AI tutor. Help users learn deeply. "
+        f"Be concise yet thorough, use examples, and adapt to the user's level. "
+        f"Always be encouraging and constructive."
+        + (f" Current topic context: {topic_context}." if topic_context else "")
+    )
 
-    # Build Gemini chat history
-    gemini_history = []
-    for msg in history[-20:]:  # Last 20 messages for context window
-        gemini_history.append({
-            "role": msg.role if msg.role == "user" else "model",
-            "parts": [msg.content],
-        })
+    contents = []
+    for msg in history[-20:]:
+        role = "user" if msg.role == "user" else "model"
+        contents.append(types.Content(role=role, parts=[types.Part(text=msg.content)]))
+    contents.append(types.Content(role="user", parts=[types.Part(text=message)]))
 
     try:
-        model = _init_model()
-        chat = model.start_chat(history=gemini_history)
-        full_message = f"{system_prompt}\n\nUser: {message}" if not gemini_history else message
-        response = chat.send_message(full_message)
-        return ChatResponse(
-            reply=response.text,
-            topic_context=topic_context,
+        client = _client()
+        response = client.models.generate_content(
+            model=MODEL,
+            contents=contents,
+            config=types.GenerateContentConfig(system_instruction=system_prompt),
         )
+        return ChatResponse(reply=response.text, topic_context=topic_context)
     except Exception as exc:
         logger.error(f"Chat generation failed: {exc}")
         return ChatResponse(
-            reply="I'm having trouble connecting right now. Please try again in a moment.",
+            reply="I'm having trouble connecting right now. Please try again.",
             topic_context=topic_context,
         )
 
 
-# ─── Personalization / Recommendations ──────────────────────────────────────
+# ─── Recommendations ─────────────────────────────────────────────────────────
 
 async def generate_recommendations(
     studied_topics: list[str],
     weak_areas: list[str],
     strong_areas: list[str],
 ) -> RecommendationResponse:
-    """Generate personalized next topic recommendations."""
     prompt = f"""You are a personalized learning advisor.
 
 Student profile:
@@ -230,21 +212,19 @@ Student profile:
 - Weak areas: {", ".join(weak_areas) if weak_areas else "None identified"}
 - Strong areas: {", ".join(strong_areas) if strong_areas else "None yet"}
 
-Recommend the next steps for this student.
+Recommend next steps.
 
 Respond ONLY with valid JSON:
 {{
   "next_topics": ["topic1", "topic2", "topic3"],
-  "revision_topics": ["topic_to_revise1", "topic_to_revise2"],
-  "rationale": "<brief explanation of why these recommendations make sense>"
+  "revision_topics": ["topic1", "topic2"],
+  "rationale": "<brief explanation>"
 }}"""
 
     try:
-        model = _init_model()
-        response = model.generate_content(prompt)
-        text = response.text.strip()
-        match = re.search(r"\{.*\}", text, re.DOTALL)
-        data = json.loads(match.group() if match else text)
+        client = _client()
+        response = client.models.generate_content(model=MODEL, contents=prompt)
+        data = _extract_json(response.text)
         return RecommendationResponse(
             next_topics=data.get("next_topics", []),
             revision_topics=data.get("revision_topics", []),
@@ -253,7 +233,6 @@ Respond ONLY with valid JSON:
     except Exception as exc:
         logger.error(f"Recommendation generation failed: {exc}")
         return RecommendationResponse(
-            next_topics=[],
-            revision_topics=[],
+            next_topics=[], revision_topics=[],
             rationale="Recommendations temporarily unavailable.",
         )

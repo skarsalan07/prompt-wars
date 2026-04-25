@@ -1,28 +1,10 @@
 """
-Shared FastAPI dependencies: current user extraction from JWT.
+Shared FastAPI dependencies: auth-free guest user for open access mode.
 """
-from fastapi import Depends, HTTPException, status
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
-from app.core.security import decode_token
-from app.services.firestore import get_user_doc
-
-bearer_scheme = HTTPBearer()
+GUEST_USER = {"id": "guest", "email": "guest@learning.ai", "display_name": "Learner"}
 
 
-async def get_current_user(
-    credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
-) -> dict:
-    token = credentials.credentials
-    user_id = decode_token(token)
-    if not user_id:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid or expired token",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    user = get_user_doc(user_id)
-    if not user:
-        # Token valid but user not in Firestore (e.g. during tests)
-        return {"id": user_id, "email": "", "display_name": "User"}
-    return user
+async def get_current_user() -> dict:
+    """Return a fixed guest user — authentication is disabled."""
+    return GUEST_USER

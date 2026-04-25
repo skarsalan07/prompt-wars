@@ -15,7 +15,7 @@ from slowapi.middleware import SlowAPIMiddleware
 from app.core.config import get_settings
 from app.core.firebase import init_firebase
 from app.middleware.rate_limiter import limiter
-from app.api.routes import auth, learning, chat, users
+from app.api.routes import learning, chat, users
 
 logging.basicConfig(
     level=logging.INFO,
@@ -62,7 +62,6 @@ def create_app() -> FastAPI:
     )
 
     # Routers
-    app.include_router(auth.router, prefix="/api/v1")
     app.include_router(learning.router, prefix="/api/v1")
     app.include_router(chat.router, prefix="/api/v1")
     app.include_router(users.router, prefix="/api/v1")

@@ -1,11 +1,7 @@
-import { useAuthStore } from '@/store/authStore'
 import { motion } from 'framer-motion'
 import { User as UserIcon, Mail, Calendar, Shield } from 'lucide-react'
-import { formatDate } from '@/lib/utils'
 
 export default function ProfilePage() {
-  const { user } = useAuthStore()
-
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <h2 className="text-2xl font-bold mb-6">Your Profile</h2>
@@ -17,12 +13,12 @@ export default function ProfilePage() {
       >
         <div className="flex items-center gap-6 mb-8">
           <div className="w-24 h-24 rounded-full gradient-bg flex items-center justify-center text-4xl font-bold text-white shadow-lg shrink-0">
-            {user?.display_name?.[0]?.toUpperCase() ?? 'U'}
+            L
           </div>
           <div>
-            <h3 className="text-2xl font-bold">{user?.display_name ?? 'User'}</h3>
+            <h3 className="text-2xl font-bold">Learner</h3>
             <p className="text-muted-foreground flex items-center gap-1.5 mt-1">
-              <Mail size={14} /> {user?.email}
+              <Mail size={14} /> guest@learning.ai
             </p>
           </div>
         </div>
@@ -32,11 +28,11 @@ export default function ProfilePage() {
             <div className="flex items-center gap-3">
               <Calendar size={18} className="text-muted-foreground" />
               <div>
-                <p className="text-sm font-medium">Member Since</p>
-                <p className="text-xs text-muted-foreground">When you joined the platform</p>
+                <p className="text-sm font-medium">Session</p>
+                <p className="text-xs text-muted-foreground">Your current learning session</p>
               </div>
             </div>
-            <p className="text-sm font-semibold">{formatDate(user?.created_at) || 'Recently'}</p>
+            <p className="text-sm font-semibold">Active Now</p>
           </div>
 
           <div className="flex items-center justify-between p-4 rounded-xl bg-secondary/50 border border-border">
@@ -49,6 +45,19 @@ export default function ProfilePage() {
             </div>
             <span className="text-xs px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full font-semibold">
               Active Learner
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between p-4 rounded-xl bg-secondary/50 border border-border">
+            <div className="flex items-center gap-3">
+              <UserIcon size={18} className="text-muted-foreground" />
+              <div>
+                <p className="text-sm font-medium">Access Mode</p>
+                <p className="text-xs text-muted-foreground">How you access the platform</p>
+              </div>
+            </div>
+            <span className="text-xs px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full font-semibold">
+              Open Access
             </span>
           </div>
         </div>

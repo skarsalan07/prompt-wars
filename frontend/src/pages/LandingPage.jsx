@@ -3,12 +3,12 @@ import { GraduationCap, Brain, BarChart3, MessageSquare, ArrowRight, Sparkles, Z
 import { useNavigate } from 'react-router-dom'
 
 const features = [
-  { icon: Brain,       title: 'AI-Powered Learning',    desc: 'Gemini 1.5 Pro explains any concept at your level — beginner to expert.' },
-  { icon: BarChart3,   title: 'Smart Personalization',  desc: 'Tracks your strengths and weaknesses to build a custom learning path.' },
-  { icon: MessageSquare, title: 'Conversational AI',    desc: 'Chat with your AI tutor, ask follow-up questions, go deep.' },
-  { icon: Zap,         title: 'Adaptive Quizzes',       desc: 'MCQs that adapt to your pace. Instant semantic feedback on every answer.' },
-  { icon: BarChart3,   title: 'Progress Dashboard',     desc: 'Beautiful charts tracking streaks, accuracy, and mastered topics.' },
-  { icon: Shield,      title: 'Secure & Private',       desc: 'Firebase Auth + JWT. Your data is yours, always.' },
+  { icon: Brain,         title: 'AI-Powered Learning',   desc: 'Gemini 1.5 Pro explains any concept at your level — beginner to expert.' },
+  { icon: BarChart3,     title: 'Smart Personalization', desc: 'Tracks your strengths and weaknesses to build a custom learning path.' },
+  { icon: MessageSquare, title: 'Conversational AI',     desc: 'Chat with your AI tutor, ask follow-up questions, go deep.' },
+  { icon: Zap,           title: 'Adaptive Quizzes',      desc: 'MCQs that adapt to your pace. Instant semantic feedback on every answer.' },
+  { icon: BarChart3,     title: 'Progress Dashboard',    desc: 'Beautiful charts tracking streaks, accuracy, and mastered topics.' },
+  { icon: Shield,        title: 'Always Available',      desc: 'No login required. Jump straight in and start learning immediately.' },
 ]
 
 const stats = [
@@ -36,21 +36,13 @@ export default function LandingPage() {
           </div>
           <span className="font-bold gradient-text text-lg">Learning Companion</span>
         </div>
-        <div className="flex items-center gap-3">
-          <button
-            onClick={() => navigate('/auth')}
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors px-4 py-2"
-          >
-            Sign in
-          </button>
-          <button
-            onClick={() => navigate('/auth?mode=register')}
-            aria-label="Get started for free"
-            className="text-sm gradient-bg text-white px-5 py-2 rounded-xl font-medium hover:opacity-90 transition-opacity glow-sm"
-          >
-            Get Started
-          </button>
-        </div>
+        <button
+          onClick={() => navigate('/app/dashboard')}
+          aria-label="Open the app"
+          className="text-sm gradient-bg text-white px-5 py-2 rounded-xl font-medium hover:opacity-90 transition-opacity glow-sm"
+        >
+          Open App
+        </button>
       </nav>
 
       {/* Hero */}
@@ -64,29 +56,27 @@ export default function LandingPage() {
             <Sparkles size={12} className="text-primary" aria-hidden />
             Powered by Google Gemini 1.5 Pro
           </div>
-          <h1
-            id="hero-heading"
-            className="text-6xl md:text-7xl font-black leading-tight mb-6"
-          >
+          <h1 id="hero-heading" className="text-6xl md:text-7xl font-black leading-tight mb-6">
             Learn anything,{' '}
             <span className="gradient-text">10x faster</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Your AI-powered learning companion that adapts to your pace, explains concepts at your level, quizzes you intelligently, and builds your personalized learning path.
+            Your AI-powered learning companion that adapts to your pace, explains concepts at your level,
+            quizzes you intelligently, and builds your personalized learning path.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <button
-              onClick={() => navigate('/auth?mode=register')}
+              onClick={() => navigate('/app/dashboard')}
               aria-label="Start learning for free"
               className="flex items-center gap-2 gradient-bg text-white px-8 py-3.5 rounded-xl font-semibold hover:opacity-90 transition-all glow text-sm"
             >
               Start Learning Free <ArrowRight size={16} aria-hidden />
             </button>
             <button
-              onClick={() => navigate('/auth')}
+              onClick={() => navigate('/app/chat')}
               className="flex items-center gap-2 glass border border-border px-8 py-3.5 rounded-xl font-semibold text-sm hover:bg-secondary transition-all"
             >
-              Sign In
+              Try AI Chat
             </button>
           </div>
         </motion.div>
@@ -137,13 +127,13 @@ export default function LandingPage() {
       <section className="relative z-10 text-center px-6 pb-24" aria-labelledby="cta-heading">
         <div className="glass rounded-3xl p-12 max-w-2xl mx-auto border-primary/20">
           <h2 id="cta-heading" className="text-3xl font-bold mb-4">Ready to start learning?</h2>
-          <p className="text-muted-foreground mb-8">Join thousands of learners accelerating their knowledge with AI.</p>
+          <p className="text-muted-foreground mb-8">No sign-up needed. Start learning with AI instantly.</p>
           <button
-            onClick={() => navigate('/auth?mode=register')}
-            aria-label="Create a free account"
+            onClick={() => navigate('/app/dashboard')}
+            aria-label="Launch the app"
             className="gradient-bg text-white px-10 py-3.5 rounded-xl font-semibold glow hover:opacity-90 transition-opacity text-sm"
           >
-            Create Free Account
+            Launch App Now
           </button>
         </div>
       </section>
