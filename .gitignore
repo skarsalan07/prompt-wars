@@ -1,1 +1,28 @@
 promptwars-69e92-firebase-adminsdk-fbsvc-d15a82a8b0.json
+
+# Logs and PID files
+*.log
+*.pid
+frontend_server.log
+backend_server.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
